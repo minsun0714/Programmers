@@ -15,8 +15,8 @@ function solution(n) {
 
 //다른 풀이
 function solution(n) {
-  return [...Array(100)]
+  return [...Array(n * 2)]
     .map((v, i) => (v = i + 1))
     .filter((num) => num % 3 !== 0 && !num.toString().includes("3"))[n - 1];
 }
-console.log(solution(40));
+console.log(solution(100));
