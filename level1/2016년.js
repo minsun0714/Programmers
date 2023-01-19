@@ -1,3 +1,4 @@
+//나의 코드
 function solution(a, b) {
   const day = ["THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED"];
   const month = {
@@ -23,4 +24,9 @@ function solution(a, b) {
   const dayIndex = (daysMonthly + b) % 7;
   return day[dayIndex];
 }
-console.log(solution(9, 1));
+//다른 코드
+function getDayName(a, b) {
+  const date = new Date(2016, a - 1, b);
+  return date.toString().slice(0, 3);
+}
+console.log(getDayName(9, 1));
