@@ -14,7 +14,6 @@ function solution(s) {
 
 //다른 코드
 function solution(s, count = 0) {
-  console.log();
   if (!s) return count;
   let [first, ...rest] = s.split("");
   let countSame = 1;
@@ -27,3 +26,4 @@ function solution(s, count = 0) {
   }
   return solution(rest.slice(i + 1).join(""), count + 1);
 }
+console.log(solution("banana"));
