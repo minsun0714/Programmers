@@ -11,7 +11,7 @@ function solution(s) {
 }
 
 //다른 코드1
-function solution(s) {
+function sol(s) {
   return JSON.parse(s.replace(/{/g, "[").replace(/}/g, "]"))
     .sort((a, b) => a.length - b.length)
     .reduce((arr, v, n) => {
@@ -23,10 +23,10 @@ function solution(s) {
 }
 
 //다른 코드2
-const solution = (s) => tupple(changeMatrix(getSets(s)));
+const solution2 = (s) => tupple(changeMatrix(getSets(s)));
 
 const getSets = (s) => {
-  const sets = s.match(/{[\d,]+}/g);
+  const sets = s.match(/{[\d]+}/g);
   return sets
     .map((set) => set.match(/[\d]+,?/g).map((v) => parseInt(v)))
     .sort((a, b) => a.length - b.length);
